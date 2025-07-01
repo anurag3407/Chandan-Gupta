@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import OptimizedImage from './OptimizedImage';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -118,9 +119,10 @@ const Gallery = () => {
               whileHover={{ y: -10 }}
               onClick={() => openLightbox(image)}
             >
-              <img 
+              <OptimizedImage 
                 src={image.url} 
                 alt={image.alt}
+                className="gallery-image"
                 loading="lazy"
               />
             </motion.div>

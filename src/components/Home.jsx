@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 import './Home.css';
 
 const Home = () => {
@@ -104,10 +105,11 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="profile-image-container">
-                <img 
-                  src="/profile.png" 
-                  alt="Chandan Gupta - Photographer" 
+                <OptimizedImage 
+                  src="/profile.png"
+                  alt="Chandan Gupta - Photographer"
                   className="profile-image"
+                  loading="eager"
                 />
               </div>
             </motion.div>
@@ -140,9 +142,10 @@ const Home = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, y: -10 }}
               >
-                <img 
+                <OptimizedImage 
                   src={image} 
                   alt={`Gallery image ${index + 1}`}
+                  className="mini-gallery-image"
                   loading="lazy"
                 />
               </motion.div>
