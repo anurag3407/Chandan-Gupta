@@ -1,0 +1,126 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Global scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for webkit browsers while maintaining functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-pink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e56b89;
+}
+
+/* Loading animation for images */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--primary-pink);
+  color: var(--dark-pink);
+}
+
+::-moz-selection {
+  background-color: var(--primary-pink);
+  color: var(--dark-pink);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--dark-pink);
+  outline-offset: 2px;
+}
+
+/* Ensure proper spacing from fixed header */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+textarea {
+  transition: all 0.3s ease;
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-pink {
+  color: var(--dark-pink);
+}
+
+.bg-pink {
+  background-color: var(--primary-pink);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .footer {
+    display: none;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+}
