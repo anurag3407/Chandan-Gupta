@@ -89,7 +89,7 @@ const Home = () => {
               <h1 className="hero-name">
                 <span className="hero-name-main">Chandan Gupta</span>
               </h1>
-              <p className="hero-subtitle">Photographer & Videographer</p>
+              <p className="hero-subtitle">Gupta Photography & Videography</p>
               <div className="hero-phone">
                 <span className="phone-label">Call:</span>
                 <a href="tel:9304153507" className="phone-number">

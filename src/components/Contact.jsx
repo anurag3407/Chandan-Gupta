@@ -25,7 +25,7 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://getform.io/f/aqomdyxa', {
+      const response = await fetch('https://getform.io/f/apjpvkoa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,8 +56,8 @@ const Contact = () => {
     {
       icon: '📧',
       title: 'Email',
-      value: 'chandan.photographer@gmail.com',
-      link: 'mailto:chandan.photographer@gmail.com'
+      value: 'Guptamixinglabbasauli2025@gmail.com',
+      link: 'mailto:Guptamixinglabbasauli2025@gmail.com'
     },
     {
       icon: '📍',
